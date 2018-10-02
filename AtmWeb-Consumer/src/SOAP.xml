@@ -1,0 +1,34 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header />
+	<SOAP-ENV:Body>
+		<wsdl:withdraw xmlns:wsdl="http://service.atm.com/">
+			<typ:accountInfo xmlns:typ="http://service.atm.com/">
+				<accId>ac1</accId>
+				<branch>s.r nagar</branch>
+				<name>john</name>
+			</typ:accountInfo>
+			<typ:transactionInfo xmlns:typ="http://service.atm.com/">
+				<amount>242</amount>
+				<atmId>ATM111</atmId>
+				<pin>0000</pin>
+			</typ:transactionInfo>
+		</wsdl:withdraw>
+	</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+
+
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header />
+	<S:Body xmlns:ns2="http://service.atm.com/">
+		<ns2:withdrawResponse>
+			<return>
+				<invoiceGenDate>10-04-2018</invoiceGenDate>
+				<invoiceNum>68686868</invoiceNum>
+				<status>Sucess</status>
+				<txNo>4647868</txNo>
+			</return>
+		</ns2:withdrawResponse>
+	</S:Body>
+</S:Envelope>

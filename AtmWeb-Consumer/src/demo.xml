@@ -1,0 +1,24 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+	<SOAP-ENV:Header>
+		<PROPERTY xmlns="http://service.atm.com/" 
+		SOAP-ENV:actor="http://schemas.xmlsoap.org/soap/actor/next">
+				abc@123
+		</PROPERTY>
+	</SOAP-ENV:Header>
+	<S:Body xmlns:ns2="http://service.atm.com/">
+		<ns2:withdraw>
+			<arg0>
+				<accId>797979</accId>
+				<branch>SrNagar</branch>
+				<name>Ashok</name>
+			</arg0>
+			<arg1>
+				<amount>1500</amount>
+				<atmId>7979</atmId>
+				<pin>0000</pin>
+			</arg1>
+		</ns2:withdraw>
+	</S:Body>
+</S:Envelope>
+Consumer : handleMessage() Begin
